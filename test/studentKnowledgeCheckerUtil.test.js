@@ -14,8 +14,14 @@ describe('studentKnowledgeCheckerUtil', () => {
     expect(checkStudentKnowledge(student, correct)).to.be.false;
   });
 
-  it('should return false if keys mismatch in count', () => {
+  it('should return false if student has fewer answers', () => {
     const student = { q1: 'a' };
+    const correct = { q1: 'a', q2: 'b' };
+    expect(checkStudentKnowledge(student, correct)).to.be.false;
+  });
+
+  it('should return false if student has more answers', () => {
+    const student = { q1: 'a', q2: 'b', q3: 'c' };
     const correct = { q1: 'a', q2: 'b' };
     expect(checkStudentKnowledge(student, correct)).to.be.false;
   });
@@ -24,5 +30,15 @@ describe('studentKnowledgeCheckerUtil', () => {
     const student = { q2: 'b', q1: 'a' };
     const correct = { q1: 'a', q2: 'b' };
     expect(checkStudentKnowledge(student, correct)).to.be.false;
+  });
+
+  it('should return false if key names are different', () => {
+    const student = { q1: 'a', q3: 'b' };
+    const correct = { q1: 'a', q2: 'b' };
+    expect(checkStudentKnowledge(student, correct)).to.be.false;
+  });
+
+  it('should handle empty inputs', () => {
+    expect(checkStudentKnowledge({}, {})).to.be.true;
   });
 });

@@ -2,6 +2,7 @@
   "name": "unit",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000u\u0000n\u0000i\u0000t\u0000_\u0000t\u0000e\u0000s\u0000t\u0000s\u0000\r\u0000 \u0000",
+  "type": "module",   
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter mochawesome --recursive",

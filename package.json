@@ -1,0 +1,28 @@
+{
+  "name": "unit",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000u\u0000n\u0000i\u0000t\u0000_\u0000t\u0000e\u0000s\u0000t\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "jest"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tank28m4/unit_tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tank28m4/unit_tests/issues"
+  },
+  "homepage": "https://github.com/tank28m4/unit_tests#readme",
+  "devDependencies": {
+    "axios": "^1.10.0",
+    "jest": "^30.0.0",
+    "nock": "^14.0.5",
+    "uuid": "^11.1.0"
+  }
+}
